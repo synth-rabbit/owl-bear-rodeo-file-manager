@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GM File Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <h1>GM Assets</h1>
+      <button id="add-btn" class="btn-primary" title="Add New Asset">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+    </header>
+
+    <div id="add-form" class="hidden glass-panel">
+      <input type="text" id="asset-name" placeholder="Asset Name" required>
+      <input type="url" id="asset-url" placeholder="Image URL (https://...)" required>
+      <select id="asset-type">
+        <option value="MAP">Map</option>
+        <option value="TOKEN">Token (Character/NPC)</option>
+        <option value="PROP">Prop</option>
+        <option value="MOUNT">Mount</option>
+      </select>
+      <div class="form-actions">
+        <button id="save-asset-btn" class="btn-primary">Save</button>
+        <button id="cancel-add-btn" class="btn-secondary">Cancel</button>
+      </div>
+    </div>
+
+    <div class="controls glass-panel">
+      <div class="search-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-input" placeholder="Search...">
+      </div>
+      <button id="sort-btn" class="btn-icon" title="Toggle Sort (A-Z)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+    </div>
+
+    <ul id="asset-list" class="asset-list">
+      <!-- Generated dynamically -->
+    </ul>
+  </div>
+
+  <!-- Using ESM version of the SDK directly -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
