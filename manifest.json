@@ -4,8 +4,8 @@
   "manifest_version": 1,
   "action": {
     "title": "File Manager",
-    "icon": "/owl-bear-rodeo-file-manager/icon.svg",
-    "popover": "/owl-bear-rodeo-file-manager/index.html",
+    "icon": "/icon.svg",
+    "popover": "/",
     "width": 350,
     "height": 500
   }
